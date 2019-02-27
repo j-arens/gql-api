@@ -1,0 +1,25 @@
+version: '3.5'
+
+services:
+
+  db:
+    image: mysql:5.7
+    container_name: api_dev_mysql
+    volumes:
+      - dbdata:/var/lib/mysql
+    ports:
+      - '${DB_PORT}:3306'
+    restart: always
+    environment:
+      MYSQL_DATABASE: '${DB_DATABASE}'
+      MYSQL_ROOT_USER: '${DB_USER}'
+      MYSQL_ROOT_PASSWORD: '${DB_PW}'
+
+  redis:
+    image: redis:4
+    restart: always
+    ports:
+      - '${REDIS_PORT}:6379'
+
+volumes:
+  dbdata:

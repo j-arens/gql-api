@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "sourceMap": true,
+    "lib": [
+      "es6",
+      "es2017",
+      "esnext.asynciterable"
+    ],
+    "target": "es6",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "baseUrl": ".",
+    "paths": {
+      "#/*": ["src/*"],
+      "#dev/*": ["dev/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "__tests__"
+  ]
+}
